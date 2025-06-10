@@ -11,4 +11,7 @@ export class AppComponent {
   heroName: string = 'Pratik';
   heroAge: number = 36;
   
+  fromHeroToApp(eventVal: string) {
+    console.log('From Hero to App: ', eventVal);
+  }
 }

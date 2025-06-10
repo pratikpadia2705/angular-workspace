@@ -6,7 +6,6 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-<app-hero [name] = "heroName" [age] = "heroAge"></app-hero>
+<app-hero [name]="heroName" e [age]="heroAge" (isLiked)="fromHeroToApp($event)"
+    (isDisliked)="fromHeroToApp($event)"></app-hero>
 <router-outlet />
