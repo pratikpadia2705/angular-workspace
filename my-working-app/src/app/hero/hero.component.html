@@ -1,4 +1,10 @@
-<p>name is : {{name}} </p>
+<!-- <p>name is : {{name}} </p>
 <p> age is : {{age}}</p>
 <button (click)="isLiked.emit('liked')">Like</button>
-<button (click)="isDisliked.emit('disliked')">Dislike</button>
+<button (click)="isDisliked.emit('disliked')">Dislike</button> -->
+
+
+<li *ngFor="let hero of heroes">
+  {{hero.name}} : {{hero.id}}
+  
+    </li>

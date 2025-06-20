@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'my-working-app';
   heroName: string = 'Pratik';
   heroAge: number = 36;
-  
+  ifChildToload: boolean = true;
   fromHeroToApp(eventVal: string) {
     console.log('From Hero to App: ', eventVal);
   }

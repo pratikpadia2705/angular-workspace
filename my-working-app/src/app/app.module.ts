@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroComponent
+    HeroComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,
