@@ -1,13 +1,14 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { HeroserviceService } from '../heroservice.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { of, from } from 'rxjs';
+import { HeroserviceService } from '../service/heroservice.service';
 @Component({
   selector: 'app-hero',
   standalone: false,
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css'
+  styleUrl: './hero.component.css',
+  providers: [HeroserviceService]
 })
-export class HeroComponent {
+export class HeroComponent implements OnInit {
 
   @Input() name: string = '';
   @Input() age: number = 0;
