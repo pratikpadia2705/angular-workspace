@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { of, from, Observable } from 'rxjs';
-import { HeroserviceService } from '../service/heroservice.service';
+import { HeroserviceService } from '../../service/heroservice.service';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 @Component({
   selector: 'app-hero',

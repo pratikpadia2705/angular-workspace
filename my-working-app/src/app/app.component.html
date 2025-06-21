@@ -6,9 +6,20 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<app-hero *ngIf="ifChildToload" [name]="heroName" [age]="heroAge" (isLiked)="fromHeroToApp($event)"
+<!-- <app-hero *ngIf="ifChildToload" [name]="heroName" [age]="heroAge" (isLiked)="fromHeroToApp($event)"
     (isDisliked)="fromHeroToApp($event)" >
 
-</app-hero>
-    
+</app-hero> -->
+
+<nav>
+<nav>
+    <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+        <li><a routerLink="/heroes">Hero</a></li>
+        <li><a routerLink="/heroes/herolist">HeroList</a></li>
+    </ul>
+</nav>
+</nav>
 <router-outlet />

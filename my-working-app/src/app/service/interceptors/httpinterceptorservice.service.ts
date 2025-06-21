@@ -18,7 +18,7 @@ export class HttpinterceptorserviceService implements HttpInterceptor {
       },
     });
 
-    const observable = httphandler.handle(request).pipe(
+    const observable$ = httphandler.handle(request).pipe(
 
       catchError(error => {
         console.error('Error occurred:', error);
@@ -30,6 +30,6 @@ export class HttpinterceptorserviceService implements HttpInterceptor {
       })
 
     );
-    return observable;
+    return observable$;
   }
 }

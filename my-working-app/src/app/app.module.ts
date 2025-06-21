@@ -3,17 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroComponent } from './hero/hero.component';
+import { HeroComponent } from './heroes/hero/hero.component';
 import { SortPipe } from './sort.pipe';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { DbserviceService } from './service/dbservice.service';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { HttpinterceptorserviceService } from './service/interceptors/httpinterceptorservice.service';
+import { Router, RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroComponent,
+    
     SortPipe
   ],
   imports: [
@@ -29,6 +30,7 @@ import { HttpinterceptorserviceService } from './service/interceptors/httpinterc
     // Otherwise, if it's a class, ensure it's a class implementing HttpInterceptor:
     {provide: HTTP_INTERCEPTORS, useClass: HttpinterceptorserviceService , multi: true}
   ],
+  exports:[RouterModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
